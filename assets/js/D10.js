@@ -421,7 +421,7 @@ const selectDiv = () => {
   const div = document.getElementById("container");
   console.dir(div);
 };
-createDiv();
+selectDiv();
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
@@ -475,7 +475,14 @@ removeLi();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-const addCss = () => {};
+const addCss = () => {
+  const tr = document.querySelectorAll("tr");
+  tr.forEach((tr1) => {
+    tr1.classList.add("test");
+    console.dir(tr1);
+  });
+};
+addCss();
 
 // [EXTRA] JS Avanzato
 
