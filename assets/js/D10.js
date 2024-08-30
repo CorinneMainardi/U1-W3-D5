@@ -417,16 +417,19 @@ console.log(movies);
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-const div = document.getElementById("container");
-console.dir(div);
-
+const selectDiv = () => {
+  const div = document.getElementById("container");
+  console.dir(div);
+};
+createDiv();
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
-const td = document.querySelectorAll("td");
-console.dir(td);
-
+const selectTd = () => {
+  const td = document.querySelectorAll("td");
+  console.dir(td);
+};
+selectTd();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
