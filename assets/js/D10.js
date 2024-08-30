@@ -361,11 +361,28 @@ console.log(onlyInLasTMillennium());
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
-
+const sumAllTheYears = () => {
+  let summYears = 0;
+  movies.forEach((movie) => {
+    summYears += parseInt(movie.Year);
+  });
+  return summYears;
+};
+console.log(sumAllTheYears());
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+const searchByTitle = (string) => {
+  const titleArray = [];
+  movies.forEach((movie) => {
+    if (movie.Title.includes(string)) {
+      titleArray.push(movie);
+    }
+  });
+  return titleArray;
+};
+console.log(searchByTitle("Lord"));
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
@@ -426,6 +443,7 @@ removeLi();
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+const addCss = () => {};
 
 // [EXTRA] JS Avanzato
 
