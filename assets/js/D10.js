@@ -513,5 +513,16 @@ addCss();
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+const isItPrime = (n) => {
+  let number = n;
+  for (let i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+console.log(isItPrime(20));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
