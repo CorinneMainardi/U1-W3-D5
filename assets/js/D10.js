@@ -16,6 +16,7 @@ REGOLE
 let sum;
 sum = 10 + 20;
 console.log(sum);
+
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
@@ -90,6 +91,7 @@ const splitMe = (string) => {
 };
 
 console.log(splitMe("odio il freddo e l'inverno"));
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
@@ -198,6 +200,7 @@ const isTodayMyBirthday = () => {
 };
 
 console.log(isTodayMyBirthday());
+
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -214,9 +217,6 @@ const deleteProp = (me, age) => {
 };
 console.log(deleteProp());
 
-/* ESERCIZIO 12
-  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-*/
 /*____________________________________________array movies______________________________*/
 
 const movies = [
@@ -320,7 +320,9 @@ const movies = [
     Poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
   },
 ];
-
+/* ESERCIZIO 12
+  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
+*/
 const newestMovie = () => {
   let recentMovie = movies[0];
   movies.forEach((movie) => {
@@ -369,6 +371,7 @@ const sumAllTheYears = () => {
   return summYears;
 };
 console.log(sumAllTheYears());
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
@@ -383,6 +386,7 @@ const searchByTitle = (string) => {
   return titleArray;
 };
 console.log(searchByTitle("Lord"));
+
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
@@ -402,6 +406,7 @@ const searchAndDivide = (string) => {
   return object;
 };
 console.log(searchAndDivide("Lord"));
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
@@ -429,6 +434,7 @@ const selectTd = () => {
   const td = document.querySelectorAll("td");
   console.dir(td);
 };
+
 selectTd();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -442,6 +448,7 @@ const print = () => {
   }
 };
 print();
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
@@ -464,6 +471,7 @@ const addLi = () => {
   ul.appendChild(li);
 };
 addLi();
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
@@ -472,6 +480,7 @@ const removeLi = () => {
   svuotaUl.innerHTML = " ";
 };
 removeLi();
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
@@ -517,12 +526,12 @@ const isItPrime = (n) => {
   let number = n;
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
-      return false;
+      return number + " il numero non è primo";
     } else {
-      return true;
+      return number + " il numero è primo";
     }
   }
 };
-console.log(isItPrime(20));
+console.log(isItPrime(23));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
