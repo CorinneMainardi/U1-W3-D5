@@ -527,13 +527,6 @@ halfTree(7);
   *****
 
 */
-tree = (numTree) =>{
-  let num = numTree;
-  for (let i= 1; ){
-    firstT = 
-  }
-
-}
 
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
@@ -541,14 +534,20 @@ tree = (numTree) =>{
 
 const isItPrime = (n) => {
   let number = n;
+  if (number === 1) {
+    return "1 è un numero primo";
+  }
+  if (number === 2) {
+    return "2 è  un numero primo";
+  }
   for (let i = 2; i < number; i++) {
     if (number % i === 0) {
-      return number + " il numero non è primo";
+      return number + ": il numero non è primo";
     } else {
-      return number + " il numero è primo";
+      return number + ": il numero è primo";
     }
   }
 };
-console.log(isItPrime(23));
+console.log(isItPrime(20));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
